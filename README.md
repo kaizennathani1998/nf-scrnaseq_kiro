@@ -1,4 +1,3 @@
-````markdown
 # 🧬⚡ CellForge AI  
 ### *Next-Generation Single-Cell RNA-seq Workflow Platform*
 
@@ -312,4 +311,4 @@ MIT License
 ---
 
 ```
-```
+
