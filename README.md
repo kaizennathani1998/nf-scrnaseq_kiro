@@ -1,125 +1,315 @@
-<h1>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/nf-core-scrnaseq_logo_dark.png">
-    <img alt="nf-core/scrnaseq" src="docs/images/nf-core-scrnaseq_logo_light.png">
-  </picture>
-</h1>
+````markdown
+# 🧬⚡ CellForge AI  
+### *Next-Generation Single-Cell RNA-seq Workflow Platform*
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/nf-core/scrnaseq)
-[![GitHub Actions CI Status](https://github.com/nf-core/scrnaseq/actions/workflows/nf-test.yml/badge.svg)](https://github.com/nf-core/scrnaseq/actions/workflows/nf-test.yml)
-[![GitHub Actions Linting Status](https://github.com/nf-core/scrnaseq/actions/workflows/linting.yml/badge.svg)](https://github.com/nf-core/scrnaseq/actions/workflows/linting.yml)
-[![AWS CI](https://img.shields.io/badge/CI%20tests-full%20size-FF9900?labelColor=000000&logo=Amazon%20AWS)](https://nf-co.re/scrnaseq/results)
-[![Cite with Zenodo](http://img.shields.io/badge/DOI-10.5281/zenodo.3568187-1073c8?labelColor=000000)](https://doi.org/10.5281/zenodo.3568187)
-[![nf-test](https://img.shields.io/badge/unit_tests-nf--test-337ab7.svg)](https://www.nf-test.com)
+<p align="center">
+  <img src="docs/images/cellforge_logo.png" width="220"/>
+</p>
 
-[![Nextflow](https://img.shields.io/badge/version-%E2%89%A525.04.0-green?style=flat&logo=nextflow&logoColor=white&color=%230DC09D&link=https%3A%2F%2Fnextflow.io)](https://www.nextflow.io/)
-[![nf-core template version](https://img.shields.io/badge/nf--core_template-3.4.1-green?style=flat&logo=nfcore&logoColor=white&color=%2324B064&link=https%3A%2F%2Fnf-co.re)](https://github.com/nf-core/tools/releases/tag/3.4.1)
-[![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/en/latest/)
-[![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?labelColor=000000&logo=docker)](https://www.docker.com/)
-[![run with singularity](https://img.shields.io/badge/run%20with-singularity-1d355c.svg?labelColor=000000)](https://sylabs.io/docs/)
-[![Launch on Seqera Platform](https://img.shields.io/badge/Launch%20%F0%9F%9A%80-Seqera%20Platform-%234256e7)](https://cloud.seqera.io/launch?pipeline=https://github.com/nf-core/scrnaseq)
+<p align="center">
+<strong>From raw FASTQs to biological insight — powered by AI, modern web apps, and reproducible workflows.</strong>
+</p>
 
-[![Get help on Slack](http://img.shields.io/badge/slack-nf--core%20%23scrnaseq-4A154B?labelColor=000000&logo=slack)](https://nfcore.slack.com/channels/scrnaseq)[![Follow on Bluesky](https://img.shields.io/badge/bluesky-%40nf__core-1185fe?labelColor=000000&logo=bluesky)](https://bsky.app/profile/nf-co.re)[![Follow on Mastodon](https://img.shields.io/badge/mastodon-nf__core-6364ff?labelColor=FFFFFF&logo=mastodon)](https://mstdn.science/@nf_core)[![Watch on YouTube](http://img.shields.io/badge/youtube-nf--core-FF0000?labelColor=000000&logo=youtube)](https://www.youtube.com/c/nf-core)
+<p align="center">
 
-## Introduction
+![Nextflow](https://img.shields.io/badge/Workflow-Nextflow-23DC9D?logo=nextflow)
+![Frontend](https://img.shields.io/badge/Frontend-React%20%7C%20Next.js-000000?logo=react)
+![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi)
+![AI Agent](https://img.shields.io/badge/AI-Agentic%20Automation-purple)
+![Docker](https://img.shields.io/badge/Container-Docker-blue?logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-**nf-core/scrnaseq** is a bioinformatics best-practice analysis pipeline for processing 10x Genomics single-cell RNA-seq data.
+</p>
 
-This is a community effort in building a pipeline capable to support:
+---
 
-- SimpleAF(Alevin-Fry) + AlevinQC
-- STARSolo
-- Kallisto + BUStools
-- Cellranger
+# 🚀 What is CellForge AI?
 
-> [!IMPORTANT]
-> Cellranger is a commercial tool from 10X Genomics Inc. and falls under the EULA from 10X Genomics Inc. The container provided for the CellRanger functionality in this pipeline has been built by the nf-core community and is therefore _not supported by 10X genomics_ directly. We are in discussions with 10X on how to improve the user experience and licence situation for both us as a community as well as 10X and end users and will update this statement here accordingly.
+**CellForge AI** is an advanced full-stack single-cell RNA-seq platform built on top of the trusted **nf-core/scrnaseq** workflow and redesigned for the modern era.
 
-## Documentation
+It transforms complex command-line bioinformatics pipelines into a sleek, intelligent web platform where users can:
 
-The nf-core/scrnaseq pipeline comes with documentation about the pipeline [usage](https://nf-co.re/scrnaseq/usage), [parameters](https://nf-co.re/scrnaseq/parameters) and [output](https://nf-co.re/scrnaseq/output).
+✅ Upload sequencing data  
+✅ Launch workflows visually  
+✅ Monitor runs live  
+✅ View QC metrics instantly  
+✅ Download processed outputs  
+✅ Use AI agents for troubleshooting, optimization, and recommendations
 
-![scrnaseq workflow](docs/images/scrnaseq_pipeline_V3.0-metro_clean.png)
+Built for:
 
-## Usage
+- 🧪 Research Labs  
+- 🏥 Clinical Genomics Teams  
+- ☁️ Cloud Bioinformatics Platforms  
+- 🧬 Core Facilities  
+- 👨‍💻 Computational Biology Teams
 
-> [!NOTE]
-> If you are new to Nextflow and nf-core, please refer to [this page](https://nf-co.re/docs/usage/installation) on how to set-up Nextflow. Make sure to [test your setup](https://nf-co.re/docs/usage/introduction#how-to-run-a-pipeline) with `-profile test` before running the workflow on actual data.
+:contentReference[oaicite:0]{index=0}
 
-First, prepare a samplesheet with your input data that looks as follows:
+---
 
-`samplesheet.csv`:
+# 🎯 Why This Exists
 
-```csv
-sample,fastq_1,fastq_2,expected_cells
-pbmc8k,pbmc8k_S1_L007_R1_001.fastq.gz,pbmc8k_S1_L007_R2_001.fastq.gz,10000
-pbmc8k,pbmc8k_S1_L008_R1_001.fastq.gz,pbmc8k_S1_L008_R2_001.fastq.gz,10000
+Traditional scRNA-seq pipelines are powerful — but difficult for many scientists to use.
+
+They often require:
+
+- Linux command line skills  
+- Workflow expertise  
+- Parameter tuning knowledge  
+- Manual troubleshooting  
+- Infrastructure management  
+
+**CellForge AI removes these barriers.**
+
+---
+
+# 🧠 Core Innovations
+
+## 🌐 Full Web Platform
+
+No terminal required.
+
+Modern dashboard allows:
+
+- Drag & drop FASTQ uploads
+- Sample sheet builder
+- Reference genome manager
+- Pipeline launcher
+- Live logs
+- Run history
+- Download center
+
+---
+
+## 🤖 AI Agent Assistant
+
+Integrated AI co-pilot helps users by:
+
+### Example Commands:
+
+> “Run this PBMC dataset using STARsolo”
+
+> “Why did my job fail?”
+
+> “Recommend best aligner for 10x v3 chemistry”
+
+> “Compare run #14 with run #9”
+
+### AI Features:
+
+- Smart parameter recommendation
+- Detect memory / CPU bottlenecks
+- Explain failed jobs
+- Suggest best aligner
+- Interpret QC reports
+- Generate summaries
+
+---
+
+## ⚙️ Multi-Engine Workflow Support
+
+Supports multiple quantification backends:
+
+| Engine | Use Case |
+|-------|----------|
+| STARsolo | Fast genome alignment |
+| Alevin-Fry | Lightweight transcript quantification |
+| Kallisto/BUS | Ultra-fast pseudoalignment |
+| Cell Ranger | 10x standard workflow |
+
+---
+
+# 🏗️ Architecture
+
+```text
+                 ┌────────────────────┐
+                 │   React Frontend   │
+                 └────────┬───────────┘
+                          │
+                          ▼
+                 ┌────────────────────┐
+                 │   FastAPI Backend  │
+                 └────────┬───────────┘
+                          │
+            ┌─────────────┼──────────────┐
+            ▼                            ▼
+   ┌────────────────┐          ┌────────────────┐
+   │ AI Agent Layer │          │ Nextflow Core  │
+   └────────────────┘          └────────────────┘
+                                        │
+                                        ▼
+                              nf-core/scrnaseq Engine
+````
+
+---
+
+# 📂 Workflow Overview
+
+## Step 1 — Upload Data
+
+Accepted inputs:
+
+* FASTQ / FASTQ.GZ
+* Samplesheet CSV
+* GTF
+* FASTA
+* Prebuilt references
+
+---
+
+## Step 2 — Configure Run
+
+Choose:
+
+```yaml
+Protocol: 10XV3
+Aligner: STARsolo
+Species: Human
+Expected Cells: 8000
+Threads: Auto
+Memory: Smart Mode
 ```
 
-Each row represents a fastq file (single-end) or a pair of fastq files (paired end).
+---
 
-Now, you can run the pipeline using:
+## Step 3 — Launch
+
+Platform auto-generates:
 
 ```bash
-nextflow run nf-core/scrnaseq \
-   -profile <docker/singularity/.../institute> \
-   --input samplesheet.csv \
-   --fasta GRCm38.p6.genome.chr19.fa \
-   --gtf gencode.vM19.annotation.chr19.gtf \
-   --protocol 10XV2 \
-   --aligner <simpleaf/kallisto/star/cellranger> \
-   --outdir <OUTDIR>
+nextflow run main.nf \
+  --input samplesheet.csv \
+  --protocol 10XV3 \
+  --aligner starsolo \
+  --outdir results/
 ```
 
-> [!WARNING]
-> Please provide pipeline parameters via the CLI or Nextflow `-params-file` option. Custom config files including those provided by the `-c` Nextflow option can be used to provide any configuration _**except for parameters**_; see [docs](https://nf-co.re/docs/usage/getting_started/configuration#custom-configuration-files).
+---
 
-For more details and further functionality, please refer to the [usage documentation](https://nf-co.re/scrnaseq/usage) and the [parameter documentation](https://nf-co.re/scrnaseq/parameters).
+## Step 4 — Live Monitoring
 
-## Decision Tree for users
+See:
 
-The nf-core/scrnaseq pipeline features several paths to analyze your single cell data. Future additions will also be done soon, e.g. the addition of multi-ome analysis types. To aid users in analyzing their data, we have added a decision tree to help people decide on what type of analysis they want to run and how to choose appropriate parameters for that.
+* Running status
+* CPU / RAM usage
+* Logs
+* Stage completion
+* ETA
+* Alerts
 
-```mermaid
-graph TD
-    A[sc RNA] -->|alevin-fry| B(h5ad/seurat/mtx matrices)
-    A[sc RNA] -->|CellRanger| B(h5ad/seurat/mtx matrices)
-    A[sc RNA] -->|kbpython| B(h5ad/seurat/mtx matrices)
-    A[sc RNA] -->|STARsolo| B(h5ad/seurat/mtx matrices)
+---
+
+## Step 5 — Results
+
+Outputs include:
+
+* Gene count matrices
+* h5ad files
+* Seurat objects
+* Cell calling metrics
+* MultiQC reports
+* QC dashboards
+
+---
+
+# 🔥 Future Roadmap
+
+## Phase II
+
+* Differential expression module
+* Cell type annotation AI
+* Pathway enrichment AI
+* Auto UMAP clustering reports
+* LLM chat with results
+
+## Phase III
+
+* Multiome ATAC + RNA
+* Spatial transcriptomics
+* Clinical sample mode
+* HIPAA-ready deployment
+* AWS HealthOmics launch mode
+
+---
+
+# 🖥️ Installation
+
+## Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-Options for the respective alignment method can be found [here](https://nf-co.re/scrnaseq/docs/usage/#aligning-options) to choose between methods.
+## Backend
 
-## Pipeline output
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python run.py
+```
 
-To see the results of an example test run with a full size dataset refer to the [results](https://nf-co.re/scrnaseq/results) tab on the nf-core website pipeline page.
-For more details about the output files and reports, please refer to the
-[output documentation](https://nf-co.re/scrnaseq/output).
+---
 
-## Credits
+# 📁 Project Structure
 
-nf-core/scrnaseq was originally written by Bailey PJ, Botvinnik O, Marques de Almeida F, Gabernet G, Peltzer A, Sturm G.
+```text
+cellforge-ai/
+│── frontend/
+│── backend/
+│── ai-agent/
+│── workflows/
+│── uploads/
+│── outputs/
+│── docs/
+│── configs/
+│── README.md
+```
 
-We thank the following people and teams for their extensive assistance in the development of this pipeline:
+---
 
-- @heylf
-- @KevinMenden
-- @FloWuenne
-- @rob-p
-- [GHGA](https://www.ghga.de/)
+# 🧬 Why CellForge AI Wins
 
-## Contributions and Support
+| Traditional Pipeline | CellForge AI     |
+| -------------------- | ---------------- |
+| CLI only             | Web UI           |
+| Manual tuning        | AI optimized     |
+| Hard debugging       | AI explanations  |
+| Static logs          | Live dashboards  |
+| Separate tools       | Unified platform |
 
-If you would like to contribute to this pipeline, please see the [contributing guidelines](.github/CONTRIBUTING.md).
+---
 
-For further information or help, don't hesitate to get in touch on the [Slack `#scrnaseq` channel](https://nfcore.slack.com/channels/scrnaseq) (you can join with [this invite](https://nf-co.re/join/slack)).
+# 🏆 Credits
 
-## Citations
+Built using:
 
-If you use nf-core/scrnaseq for your analysis, please cite it using the following doi: [10.5281/zenodo.3568187](https://doi.org/10.5281/zenodo.3568187)
+* nf-core/scrnaseq
+* Nextflow
+* FastAPI
+* React / Next.js
+* Docker
+* Modern AI orchestration systems
 
-The basic benchmarks that were used as motivation for incorporating the available modular workflows can be found in [this publication](https://www.biorxiv.org/content/10.1101/673285v2).
+Original workflow inspiration from nf-core/scrnaseq. 
 
-We offer all three paths for the processing of scRNAseq data so it remains up to the user to decide which pipeline workflow is chosen for a particular analysis question.
+---
 
-An extensive list of references for the tools used by the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
+# 📜 License
+
+MIT License
+
+---
+
+# 💡 Tagline
+
+### **CellForge AI — Where Single Cells Meet Artificial Intelligence**
+
+---
+
+```
+```
