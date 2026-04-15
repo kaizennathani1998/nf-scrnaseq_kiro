@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "aws-healthomics": {
+      "command": "uvx",
+      "args": ["awslabs.amazon-omics-mcp-server@latest"],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "list_workflows",
+        "get_workflow",
+        "list_runs",
+        "get_run",
+        "list_run_tasks",
+        "get_run_task"
+      ]
+    },
+    "aws-docs": {
+      "command": "uvx",
+      "args": ["awslabs.aws-documentation-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

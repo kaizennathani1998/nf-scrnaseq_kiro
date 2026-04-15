@@ -1,0 +1,31 @@
+.nextflow*
+work/
+data/
+results/
+.DS_Store
+testing/
+testing*
+*.pyc
+null/
+log/
+reports/
+testme.sh
+.nf-test*
+.vscode
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Backend
+backend/.env
+backend/.venv/
+backend/data/
+backend/*.pkg
+backend/app/routes/__pycache__/
+backend/app/__pycache__/
+backend/__pycache__/
+
+# Sessions
+backend/data/h5ad_sessions/
